@@ -71,8 +71,8 @@ namespace TYColor
 		// 关于
 		private void About_button_Click(object sender, EventArgs e)
         {
-
-        }
+			MessageBox.Show("两块钱取色器是借鉴小丸拾色器的界面重新实现并根据个人需求增加了功能的小工具，仅为个人学习项目。\n作者：Secriy\nBlog：https://secriy.com \n", "关于", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+		}
 
     }
 }
