@@ -33,10 +33,10 @@
             this.pictureBox_color = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label_rgb = new System.Windows.Forms.Label();
-            this.textBox_value = new System.Windows.Forms.TextBox();
-            this.palette = new System.Windows.Forms.Button();
-            this.selector = new System.Windows.Forms.Button();
-            this.about = new System.Windows.Forms.Button();
+            this.TextBox = new System.Windows.Forms.TextBox();
+            this.Palette = new System.Windows.Forms.Button();
+            this.Selector = new System.Windows.Forms.Button();
+            this.About = new System.Windows.Forms.Button();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
             this.pick_timer = new System.Windows.Forms.Timer(this.components);
             this.tip = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label_rgb);
-            this.groupBox1.Controls.Add(this.textBox_value);
+            this.groupBox1.Controls.Add(this.TextBox);
             this.groupBox1.Location = new System.Drawing.Point(118, 42);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(208, 70);
@@ -76,43 +76,43 @@
             this.label_rgb.TabIndex = 4;
             this.label_rgb.Text = "RGB";
             // 
-            // textBox_value
+            // TextBox
             // 
-            this.textBox_value.Location = new System.Drawing.Point(75, 29);
-            this.textBox_value.Name = "textBox_value";
-            this.textBox_value.Size = new System.Drawing.Size(100, 21);
-            this.textBox_value.TabIndex = 5;
-            this.textBox_value.Click += new System.EventHandler(this.textBox_value_Click);
-            this.textBox_value.TextChanged += new System.EventHandler(this.textBox_value_TextChanged);
+            this.TextBox.Location = new System.Drawing.Point(75, 29);
+            this.TextBox.Name = "TextBox";
+            this.TextBox.Size = new System.Drawing.Size(100, 21);
+            this.TextBox.TabIndex = 5;
+            this.TextBox.Click += new System.EventHandler(this.TextBox_Click);
+            this.TextBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
-            // palette
+            // Palette
             // 
-            this.palette.Location = new System.Drawing.Point(118, 12);
-            this.palette.Name = "palette";
-            this.palette.Size = new System.Drawing.Size(58, 24);
-            this.palette.TabIndex = 5;
-            this.palette.Text = "调色板";
-            this.palette.UseVisualStyleBackColor = true;
-            this.palette.Click += new System.EventHandler(this.Palette_button_Click);
+            this.Palette.Location = new System.Drawing.Point(118, 12);
+            this.Palette.Name = "Palette";
+            this.Palette.Size = new System.Drawing.Size(58, 24);
+            this.Palette.TabIndex = 5;
+            this.Palette.Text = "调色板";
+            this.Palette.UseVisualStyleBackColor = true;
+            this.Palette.Click += new System.EventHandler(this.Palette_button_Click);
             // 
-            // selector
+            // Selector
             // 
-            this.selector.Location = new System.Drawing.Point(193, 12);
-            this.selector.Name = "selector";
-            this.selector.Size = new System.Drawing.Size(58, 24);
-            this.selector.TabIndex = 6;
-            this.selector.Text = "拾色器";
-            this.selector.UseVisualStyleBackColor = true;
+            this.Selector.Location = new System.Drawing.Point(193, 12);
+            this.Selector.Name = "Selector";
+            this.Selector.Size = new System.Drawing.Size(58, 24);
+            this.Selector.TabIndex = 6;
+            this.Selector.Text = "拾色器";
+            this.Selector.UseVisualStyleBackColor = true;
             // 
-            // about
+            // About
             // 
-            this.about.Location = new System.Drawing.Point(268, 12);
-            this.about.Name = "about";
-            this.about.Size = new System.Drawing.Size(58, 24);
-            this.about.TabIndex = 7;
-            this.about.Text = "关于";
-            this.about.UseVisualStyleBackColor = true;
-            this.about.Click += new System.EventHandler(this.About_button_Click);
+            this.About.Location = new System.Drawing.Point(268, 12);
+            this.About.Name = "About";
+            this.About.Size = new System.Drawing.Size(58, 24);
+            this.About.TabIndex = 7;
+            this.About.Text = "关于";
+            this.About.UseVisualStyleBackColor = true;
+            this.About.Click += new System.EventHandler(this.About_button_Click);
             // 
             // tip
             // 
@@ -126,7 +126,7 @@
             // 
             // tip_timer
             // 
-            this.tip_timer.Interval = 1000;
+            this.tip_timer.Interval = 2000;
             this.tip_timer.Tick += new System.EventHandler(this.tip_timer_Tick);
             // 
             // MainForm
@@ -135,9 +135,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(341, 127);
             this.Controls.Add(this.tip);
-            this.Controls.Add(this.about);
-            this.Controls.Add(this.selector);
-            this.Controls.Add(this.palette);
+            this.Controls.Add(this.About);
+            this.Controls.Add(this.Selector);
+            this.Controls.Add(this.Palette);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox_color);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -158,14 +158,14 @@
         #endregion
         private System.Windows.Forms.PictureBox pictureBox_color;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox_value;
+        private System.Windows.Forms.TextBox TextBox;
+        private System.Windows.Forms.Button Palette;
+        private System.Windows.Forms.Button Selector;
+        private System.Windows.Forms.Button About;
         private System.Windows.Forms.Label label_rgb;
-        private System.Windows.Forms.Button palette;
-        private System.Windows.Forms.Button selector;
-        private System.Windows.Forms.Button about;
+        private System.Windows.Forms.Label tip;
         private System.Windows.Forms.ColorDialog colorDialog;
         private System.Windows.Forms.Timer pick_timer;
-        private System.Windows.Forms.Label tip;
         private System.Windows.Forms.Timer tip_timer;
     }
 }
